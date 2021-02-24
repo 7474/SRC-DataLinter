@@ -11,7 +11,7 @@ runs:
       shell: bash
 #     - run: chmod +x ${{ github.action_path }}/bin/SRCDataLinter.exe
 #       shell: bash
-    - run: ls -lar ${{ github.action_path }}
+    - run: ls -lar ${{ github.action_path }}/bin/
       shell: bash
     - run: ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
       shell: bash
