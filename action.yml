@@ -4,8 +4,6 @@ inputs:
   files:
     description: 'Lint target'
     required: true
-outputs:
-  random-number:
 runs:
   using: "composite"
   steps:
