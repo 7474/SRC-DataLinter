@@ -13,5 +13,5 @@ runs:
 #       shell: bash
     - run: ls -lar ${{ github.action_path }}/bin/
       shell: bash
-    - run: ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
+    - run: dotnet ${{ github.action_path }}/bin/SRCDataLinter.dll ${{ inputs.files }}
       shell: bash
