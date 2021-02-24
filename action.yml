@@ -9,7 +9,9 @@ runs:
   steps:
     - run: echo "##[add-matcher]${{ github.action_path }}/src-lint.json"
       shell: bash
-    - run: chmod +x ${{ github.action_path }}/bin/SRCDataLinter.exe
+#     - run: chmod +x ${{ github.action_path }}/bin/SRCDataLinter.exe
+#       shell: bash
+    - run: ls -lar ${{ github.action_path }}/bin/
       shell: bash
     - run: ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
       shell: bash
