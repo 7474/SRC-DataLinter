@@ -4,12 +4,12 @@ inputs:
   files:
     description: 'Lint target'
     required: true
-outputs:
-  random-number:
 runs:
   using: "composite"
   steps:
     - run: echo "##[add-matcher]${{ github.action_path }}/src-lint.json"
       shell: bash
-    - run: dotnet run ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
+    - run: chmod +x ${{ github.action_path }}/bin/SRCDataLinter.exe
+      shell: bash
+    - run: ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
       shell: bash
