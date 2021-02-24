@@ -1,0 +1,15 @@
+name: 'SRC DataLinter'
+description: 'Lint SRC Data'
+inputs:
+  files:
+    description: 'Lint target'
+    required: true
+outputs:
+  random-number:
+runs:
+  using: "composite"
+  steps:
+    - run: echo "##[add-matcher]${{ github.action_path }}/src-lint.json"
+      shell: bash
+    - run: dotnet run ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
+      shell: bash
