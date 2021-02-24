@@ -9,5 +9,5 @@ runs:
   steps:
     - run: echo "##[add-matcher]${{ github.action_path }}/src-lint.json"
       shell: bash
-    - run: dotnet run ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
+    - run: ${{ github.action_path }}/bin/SRCDataLinter.exe ${{ inputs.files }}
       shell: bash
