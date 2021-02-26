@@ -18,7 +18,7 @@ None.
 
 ## Example usage
 ```yaml
-    - uses: 7474/SRC-DataLinter@v1
+    - uses: 7474/SRC-DataLinter@master
       with:
         files: 'data/ ex_data/path/to/unit.txt'
 ```
