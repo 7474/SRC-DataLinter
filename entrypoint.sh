@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
-echo "##[add-matcher]/src-lint.json"
+cp /src-lint.json "$HOME/"
+echo "::add-matcher::$HOME/src-lint.json"
 
 dotnet /app/SRCDataLinter.dll $@
