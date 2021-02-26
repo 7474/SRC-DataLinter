@@ -1,5 +1,24 @@
 # SRC-DataLinter
 
-## Link
+This action validate the SRC -Simulation RPG Construction- Data and annotate error to Pull Request.
 
-- https://docs.github.com/ja/actions/creating-actions/creating-a-composite-run-steps-action
+However, the character code is UTF-8, not Shift_JIS. 
+
+Ref. https://github.com/7474/SRC/tree/master/SRC.Sharp/SRCDataLinter
+
+## Inputs
+
+### `files`
+
+**Required** Lint target file or directory.
+
+## Outputs
+
+None.
+
+## Example usage
+```yaml
+    - uses: 7474/SRC-DataLinter@v1
+      with:
+        files: 'data/ ex_data/path/to/unit.txt'
+```
