@@ -2,12 +2,10 @@ name: 'SRC DataLinter'
 description: 'Lint SRC Data'
 inputs:
   files:
-    description: 'Lint target'
+    description: 'Lint target file or directory.'
     required: true
 runs:
-  using: "composite"
-  steps:
-    - run: echo "##[add-matcher]${{ github.action_path }}/src-lint.json"
-      shell: bash
-    - run: dotnet ${{ github.action_path }}/bin/SRCDataLinter.dll ${{ inputs.files }}
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.files }}
