@@ -1,6 +1,6 @@
 # SRC-DataLinter
 
-This action validate the [SRC -Simulation RPG Construction -](http://www.src-srpg.jpn.org/) Data and annotate error to Pull Request.
+This action validate the [SRC - Simulation RPG Construction -](http://www.src-srpg.jpn.org/) Data and annotate error to Pull Request.
 
 However, the character code is UTF-8, not Shift_JIS. 
 
