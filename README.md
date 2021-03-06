@@ -4,7 +4,9 @@ This action validate the [SRC - Simulation RPG Construction -](http://www.src-sr
 
 However, the character code is UTF-8, not Shift_JIS. 
 
-Ref. https://github.com/7474/SRC/tree/master/SRC.Sharp/SRCDataLinter
+Ref.
+- https://github.com/7474/SRC/tree/master/SRC.Sharp/SRCDataLinter
+- https://hub.docker.com/r/koudenpa/srcdatalinter
 
 ## Inputs
 
